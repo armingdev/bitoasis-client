@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiUrl: 'https://api-pub.bitfinex.com/v2',
+  wsUrl: 'wss://api-pub.bitfinex.com/ws/2',
 };
 
 /*

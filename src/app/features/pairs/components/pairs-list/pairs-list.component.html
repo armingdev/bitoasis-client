@@ -1,0 +1,15 @@
+<div class="main-content">
+  <ng-container *ngIf="pairsList$">
+    <div *ngFor="let pair of pairsList$ | async;">
+      <div class="card" (click)="pairDetails(pair)">
+        <div class="card-symbol-content">
+          {{pair.symbol}}
+        </div>
+        <div class="card-price-content" [ngClass]="isNegative(pair.daily_change) ? 'positive-number' : 'negative-number'">
+          <span>{{pair.last_price}}</span>
+          <span>{{+pair.daily_change * 100 | number:'1.2'}}%</span>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>
